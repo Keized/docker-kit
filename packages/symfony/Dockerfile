@@ -27,7 +27,7 @@ RUN set -eux; \
     apk del -f .build-deps
 
 # Configure PHP
-COPY --link ./conf/app.ini $PHP_INI_DIR/conf.d/
+COPY --link ./conf.d/app.ini $PHP_INI_DIR/conf.d/
 
 # Install composer
 ENV COMPOSER_ALLOW_SUPERUSER=1

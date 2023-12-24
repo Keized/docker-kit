@@ -1,5 +1,7 @@
 DOCKER_COMP = docker compose
 
+PHP_CONT = $(DOCKER_COMP) exec app
+
 # Executables
 PHP      = $(PHP_CONT) php
 COMPOSER = $(PHP_CONT) composer

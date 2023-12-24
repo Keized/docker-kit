@@ -1,7 +1,12 @@
+version: "3.4"
+
 services:
-  php:
+  app:
     build:
       context: .
       target: prod
     environment:
       APP_SECRET: ${APP_SECRET}
+    volumes:
+      - ./public:/app/public
+      - ./var:/app/var
